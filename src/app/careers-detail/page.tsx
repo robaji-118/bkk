@@ -1,6 +1,6 @@
 "use client";
-import Navbar from "../components/Navbar";
-import FooterSection from "../components/Footer";
+import Navbar from "@/app/applications/components/Navbar";
+import FooterSection from "@/app/applications/components/Footer";
 
 export default function CareersDetail() {
   return (

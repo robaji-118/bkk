@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Send, MapPin, Phone, Mail, Clock, CheckCircle2, ArrowRight } from 'lucide-react';
-import Navbar from '../components/Navbar';
-import FooterSection from '../components/Footer';
+import Navbar from "@/app/applications/components/Navbar";
+import FooterSection from "@/app/applications/components/Footer";
 import CustomSelect from '@/components/ui/CustomSelect';
 
 type FormData = {
