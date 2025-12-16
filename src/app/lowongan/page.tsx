@@ -3,8 +3,8 @@
 import React, { useState } from 'react';
 import { Search, MapPin, Briefcase, Clock, ArrowRight, Filter } from 'lucide-react';
 import Image, { StaticImageData } from 'next/image';
-import Navbar from "@/app/applications/components/Navbar";
-import FooterSection from "@/app/applications/components/Footer";
+import Navbar from '../applications/components/Navbar';
+import FooterSection from '../applications/components/Footer';
 
 // Sample company logos (ganti dengan path logo yang sesuai)
 import googleLogo from "@/assets/images/Google_logo.svg";

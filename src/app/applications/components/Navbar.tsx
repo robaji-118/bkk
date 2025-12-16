@@ -8,16 +8,17 @@ import logo from "@/assets/images/logo.png";
 import { Button } from "@/components/ui/button";
 
 const Navbar: React.FC = (
-  
+
 ) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const pathname = usePathname();
 
   const getActiveMenu = () => {
     if (pathname === "/") return "Home";
+
+    if (pathname === "/about") return "Tentang Kami";
     if (pathname === "/contact") return "Contact";
     if (pathname === "/lowongan") return "Lowongan Kerja";
-    if (pathname.includes("/tentang")) return "Tentang Kami";
     return "Home";
   };
 
@@ -67,8 +68,9 @@ const Navbar: React.FC = (
                 />
               </Link>
 
-              {/* Tentang Kami */}
-              <button
+              {/* Lowongan Kerja */}
+              <Link
+                href="/about"
                 className="body-regular_regular text-white cursor-pointer 
                   transition-all duration-300 relative pb-1 group
                   hover:text-gray-300"
@@ -79,7 +81,7 @@ const Navbar: React.FC = (
                   transition-all duration-300
                   ${activeMenu === "Tentang Kami" ? "w-full" : "w-0 group-hover:w-full"}`}
                 />
-              </button>
+              </Link>
 
               {/* Lowongan Kerja */}
               <Link
