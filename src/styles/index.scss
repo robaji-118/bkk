@@ -1,0 +1,39 @@
+// To avoid any potential issue with character encoding
+@charset 'utf-8';
+
+@import 'abstract/index';
+@import 'base/index';
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 toRem(80);
+  @media screen and (max-width: $responsive-2xl) {
+    padding: 0 toRem(64);
+  }
+  @media screen and (max-width: $responsive-xl-2) {
+    padding: 0 toRem(56);
+  }
+  @media screen and (max-width: $responsive-xl) {
+    padding: 0 toRem(48);
+  }
+  @media screen and (max-width: $responsive-lg-2) {
+    padding: 0 toRem(40);
+  }
+  @media screen and (max-width: $responsive-lg) {
+    padding: 0 toRem(32);
+  }
+  @media screen and (max-width: $responsive-md) {
+    padding: 0 toRem(24);
+  }
+  @media screen and (max-width: $responsive-sm) {
+    padding: 0 toRem(20);
+  }
+  @media screen and (max-width: $responsive-xs-3) {
+    padding: 0 toRem(16);
+  }
+}
+
+body {
+  font-family: $font-poppins;
+}

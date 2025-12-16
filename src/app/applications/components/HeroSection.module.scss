@@ -1,0 +1,171 @@
+// Variables
+$primary-green: #10b981;
+$primary-green-dark: #059669;
+$secondary-green: #047857;
+$accent-yellow: #fefb09;
+$accent-yellow-hover: #f59e0b;
+$text-white: #ffffff;
+$text-light: #d1fae5;
+$text-emerald: #6ee7b7;
+$bg-overlay: rgba(0, 0, 0, 0.4);
+$border-light: rgba(255, 255, 255, 0.2);
+$border-lighter: rgba(255, 255, 255, 0.3);
+$transition: all 0.3s ease;
+
+// Hero Section
+.hero {
+  background-color: #f9fafb;
+
+  &__content {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  &__image {
+    position: absolute !important;
+    inset: 0;
+    z-index: 1;
+  }
+
+  // Overlay
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: $bg-overlay;
+    z-index: 2;
+  }
+
+  // Pattern Overlay
+  &__pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.3;
+    z-index: 3;
+  }
+
+  // Floating Buttons
+  &__floatingButtons {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 10;
+  }
+
+  &__floatingBtn {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: $text-white;
+    border: 1px solid $border-lighter;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+  }
+
+  // Text Content
+  &__text {
+    position: relative;
+    z-index: 10;
+    padding: 157px 0px 80 64px;
+    max-width: 42rem;
+  }
+
+  &__subtitle {
+    color: $text-emerald;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.5px;
+  }
+
+  &__title {
+  }
+
+  &__description {
+  }
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  &__btn {
+    padding: 0.75rem 2rem;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: $transition;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    &Primary {
+      background-color: $accent-yellow;
+      color: #1f2937;
+
+      &:hover {
+        background-color: $accent-yellow-hover;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    &Secondary {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: $text-white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-color: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15),
+          0 0 20px rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  // Stats Section
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  &__statItem {
+    text-align: left;
+  }
+
+  &__statNumber {
+
+
+  }
+
+  &__statLabel {
+  }
+}
